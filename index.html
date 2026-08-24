@@ -9,11 +9,12 @@
     <style>
         :root {
             --unam-blue: #0A2240;
+            --unam-light-blue: #1d4ed8;
             --unam-gold: #C09533;
             --accent-red: #B31717;
             --pure-white: #FFFFFF;
-            --light-bg: #F4F6F9;
-            --text-color: #222222;
+            --light-bg: #e0f2fe;
+            --text-color: #1e293b;
         }
         * {
             margin: 0;
@@ -23,7 +24,7 @@
         }
         body {
             color: var(--text-color);
-            background-color: var(--light-bg);
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -48,6 +49,7 @@
         .logo-container img {
             height: 60px;
             width: auto;
+            max-width: 100%;
         }
         .logo-container h1 {
             font-size: 1.3rem;
@@ -68,7 +70,7 @@
             color: var(--accent-red);
         }
 
-        /* Hero Section con Carrusel de Fondo */
+        /* Hero Section con Carrusel Brillante */
         .hero {
             position: relative;
             background-color: var(--unam-blue);
@@ -98,7 +100,7 @@
             transition: opacity 1s ease-in-out;
         }
         .hero-bg-slide.active {
-            opacity: 0.35;
+            opacity: 0.7; /* Subido para que brille más y se note el carrusel */
         }
         .hero-overlay {
             position: absolute;
@@ -106,7 +108,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 34, 64, 0.75);
+            background: linear-gradient(135deg, rgba(10, 34, 64, 0.65) 0%, rgba(29, 78, 216, 0.5) 100%);
             z-index: 2;
         }
         .hero-content {
@@ -117,11 +119,13 @@
             font-size: 2.8rem;
             margin-bottom: 20px;
             color: var(--unam-gold);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 30px;
             color: #FFFFFF !important;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
         }
         .btn {
             background: var(--unam-gold);
@@ -140,14 +144,14 @@
             transform: translateY(-2px);
         }
 
-        /* Secciones Generales */
+        /* Secciones Generales con Degradados */
         section {
             padding: 80px 10%;
-            background: var(--pure-white);
+            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
             margin-bottom: 10px;
         }
         section:nth-child(even) {
-            background: var(--light-bg);
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
         }
         .section-title {
             text-align: center;
@@ -157,8 +161,8 @@
             border-bottom: 3px solid var(--unam-gold);
             display: inline-block;
             padding-bottom: 10px;
-            left: 50%;
             position: relative;
+            left: 50%;
             transform: translateX(-50%);
         }
 
@@ -199,6 +203,7 @@
             flex: 1;
             border-top: 5px solid var(--accent-red);
             transition: transform 0.3s ease;
+            word-wrap: break-word;
         }
         .card h3 {
             color: var(--unam-blue);
@@ -215,7 +220,7 @@
             flex-wrap: wrap;
         }
         .tab-btn {
-            background: var(--light-bg);
+            background: var(--pure-white);
             border: 2px solid var(--unam-blue);
             color: var(--unam-blue);
             padding: 12px 25px;
@@ -252,7 +257,7 @@
             margin-top: 20px;
         }
         .info-box {
-            background: var(--light-bg);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
             padding: 25px;
             border-radius: 8px;
             border-top: 3px solid var(--accent-red);
@@ -272,7 +277,7 @@
             margin-bottom: 8px;
         }
 
-        /* Carrusel de Actividades y Eventos con Imagen Incorporada */
+        /* Carrusel de Actividades con Degradado Azul */
         .carousel-container {
             position: relative;
             max-width: 900px;
@@ -288,18 +293,17 @@
         .carousel-slide {
             min-width: 100%;
             box-sizing: border-box;
-            background: var(--unam-blue);
+            background: linear-gradient(135deg, var(--unam-blue) 0%, var(--unam-light-blue) 100%);
             color: white;
             padding: 40px;
             display: flex;
             align-items: center;
             gap: 30px;
         }
-        /* Box para la imagen dentro del carrusel */
         .carousel-img-box {
             flex: 0 0 280px;
             height: 180px;
-            background: #ffffff20;
+            background: #ffffff30;
             border: 2px dashed var(--unam-gold);
             border-radius: 8px;
             display: flex;
@@ -311,6 +315,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            max-width: 100%;
         }
         .carousel-text-box {
             flex: 1;
@@ -344,16 +349,16 @@
         .prev { left: 15px; }
         .next { right: 15px; }
 
-        /* Footer */
+        /* Footer con Degradado */
         footer {
-            background: var(--unam-blue);
+            background: linear-gradient(135deg, #071628 0%, var(--unam-blue) 100%);
             color: var(--pure-white);
             text-align: center;
             padding: 40px 20px;
             border-top: 4px solid var(--unam-gold);
         }
 
-        /* Responsivo */
+        /* Responsivo móvil */
         @media (max-width: 900px) {
             .identity-container {
                 flex-direction: column;
@@ -405,7 +410,7 @@
         </nav>
     </header>
 
-    <!-- Sección Hero con Carrusel de Fondo -->
+    <!-- Sección Hero con Carrusel de Fondo Brillante -->
     <section id="inicio" class="hero">
         <div class="hero-bg-slider">
             <div class="hero-bg-slide active" style="background-image: url('foto de eventos/Campamento.jpeg');"></div>
@@ -416,7 +421,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content" data-aos="fade-down" data-aos-duration="1000">
             <h2>Bienvenidos al Colegio Oviedo Schönthal</h2>
-            <p>Formación integral, pilar técnico y humano para el futuro de nuestros jóvenes .</p>
+            <p>Formación integral, pilar técnico y humano para el futuro de nuestros jóvenes.</p>
             <a href="#niveles" class="btn">Conoce nuestra oferta</a>
         </div>
     </section>
@@ -433,14 +438,14 @@
                 </div>
                 <div class="card">
                     <h3>Misión</h3>
-                    <p>En el Colegio Oviedo Schonthal brindamos una formación integral basada en valores, excelencia académica y desarrollo emocional. Nuestro compromiso es preparar alumnos con herramientas académicas, humanas y sociales que les permitan enfrentar con éxito los retos del futuro .</p>
+                    <p>En el Colegio Oviedo Schonthal brindamos una formación integral basada en valores, excelencia académica y desarrollo emocional. Nuestro compromiso es preparar alumnos con herramientas académicas, humanas y sociales que les permitan enfrentar con éxito los retos del futuro.</p>
                 </div>
             </div>
 
             <div class="identity-pair" data-aos="fade-left" data-aos-duration="800">
                 <div class="card">
                     <h3>¿Por Qué Elegirnos?</h3>
-                    <p>Contamos con formación en valores , desarrollo emocional , actividades deportivas y culturales , atención personalizada , grupos reducidos , inglés intensivo con certificación de la Universidad de Cambridge , e incorporación a la UNAM en preparatoria .</p>
+                    <p>Contamos con formación en valores, desarrollo emocional, actividades deportivas y culturales, atención personalizada, grupos reducidos, inglés intensivo con certificación de la Universidad de Cambridge, e incorporación a la UNAM en preparatoria.</p>
                 </div>
                 <div class="mascot-right-container">
                     <img src="derecha.png" alt="Mascota Derecha">
@@ -452,47 +457,47 @@
     <!-- Niveles Educativos Interactivos -->
     <section id="niveles">
         <div style="text-align: center;" data-aos="fade-up">
-            <h2 class="section-title">Educación Integral para Cada Etapa </h2>
+            <h2 class="section-title">Educación Integral para Cada Etapa</h2>
         </div>
 
         <div class="tabs-nav" data-aos="fade-up">
-            <button class="tab-btn active" onclick="openTab(event, 'preescolar')">📘 Preescolar </button>
-            <button class="tab-btn" onclick="openTab(event, 'primaria')">📗 Primaria </button>
-            <button class="tab-btn" onclick="openTab(event, 'secundaria')">📙 Secundaria </button>
-            <button class="tab-btn" onclick="openTab(event, 'preparatoria')">📕 Preparatoria (UNAM) </button>
+            <button class="tab-btn active" onclick="openTab(event, 'preescolar')">📘 Preescolar</button>
+            <button class="tab-btn" onclick="openTab(event, 'primaria')">📗 Primaria</button>
+            <button class="tab-btn" onclick="openTab(event, 'secundaria')">📙 Secundaria</button>
+            <button class="tab-btn" onclick="openTab(event, 'preparatoria')">📕 Preparatoria (UNAM)</button>
         </div>
 
         <!-- Contenido: Preescolar -->
         <div id="preescolar" class="tab-content active">
             <h3 style="color: var(--unam-blue); font-size: 1.8rem; margin-bottom: 10px;">Preescolar</h3>
-            <p><strong>Formación integral para los más pequeños </strong></p>
+            <p><strong>Formación integral para los más pequeños</strong></p>
             <div class="info-grid">
                 <div class="info-box">
                     <h4>Características y Materias</h4>
                     <ul>
-                        <li>Desarrollo emocional y social </li>
-                        <li>Actividades deportivas y recreativas </li>
-                        <li>Educación en valores </li>
-                        <li>Computación e Inglés diario </li>
-                        <li>Actividades artísticas y extracurriculares </li>
+                        <li>Desarrollo emocional y social</li>
+                        <li>Actividades deportivas y recreativas</li>
+                        <li>Educación en valores</li>
+                        <li>Computación e Inglés diario</li>
+                        <li>Actividades artísticas y extracurriculares</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Regulares</h4>
                     <ul>
-                        <li>Inscripción: $4,950.00 </li>
-                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $4,650.00 </li>
-                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $5,150.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $4,950.00</li>
+                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $4,650.00</li>
+                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $5,150.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Convenio</h4>
                     <ul>
-                        <li>Inscripción: <strong>SIN INSCRIPCIÓN</strong> (Alumnos de nuevo ingreso) </li>
-                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $3,750.00 </li>
-                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $4,250.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: <strong>SIN INSCRIPCIÓN</strong> (Alumnos de nuevo ingreso)</li>
+                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $3,750.00</li>
+                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $4,250.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
             </div>
@@ -501,33 +506,33 @@
         <!-- Contenido: Primaria -->
         <div id="primaria" class="tab-content">
             <h3 style="color: var(--unam-blue); font-size: 1.8rem; margin-bottom: 10px;">Primaria</h3>
-            <p><strong>Horario de Clases:</strong> 7:45 a 15:00 horas | <strong>Ampliado (A solicitar):</strong> 6:30 a 15:30 horas </p>
+            <p><strong>Horario de Clases:</strong> 7:45 a 15:00 horas | <strong>Ampliado (A solicitar):</strong> 6:30 a 15:30 horas</p>
             <div class="info-grid">
                 <div class="info-box">
                     <h4>Clases Curriculares</h4>
                     <ul>
-                        <li>Español e Inglés intensivo </li>
-                        <li>Música y Educación Física </li>
-                        <li>Computación y Valores Humanos / Desarrollo Emocional </li>
-                        <li>Certificación Internacional en 6to. grado (KEY, PET) </li>
+                        <li>Español e Inglés intensivo</li>
+                        <li>Música y Educación Física</li>
+                        <li>Computación y Valores Humanos / Desarrollo Emocional</li>
+                        <li>Certificación Internacional en 6to. grado (KEY, PET)</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Regulares</h4>
                     <ul>
-                        <li>Inscripción: $6,750.00 </li>
-                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $6,100.00 </li>
-                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $6,800.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $6,750.00</li>
+                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $6,100.00</li>
+                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $6,800.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Convenio</h4>
                     <ul>
-                        <li>Inscripción: $3,500.00 </li>
-                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $4,300.00 </li>
-                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $5,000.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $3,500.00</li>
+                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $4,300.00</li>
+                        <li>Tiempo Completo (11 meses, 07:30 a 15:30 hrs): $5,000.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
             </div>
@@ -536,30 +541,30 @@
         <!-- Contenido: Secundaria -->
         <div id="secundaria" class="tab-content">
             <h3 style="color: var(--unam-blue); font-size: 1.8rem; margin-bottom: 10px;">Secundaria</h3>
-            <p><strong>Plan de estudios 2022 </strong></p>
+            <p><strong>Plan de estudios 2022</strong></p>
             <div class="info-grid">
                 <div class="info-box">
                     <h4>Plan Académico</h4>
                     <ul>
-                        <li>8 horas de inglés a la semana impartido en niveles </li>
-                        <li>Certificación Internacional en 3er. grado (KEY, PET, FCE) </li>
-                        <li>Informática 8 horas a la semana </li>
+                        <li>8 horas de inglés a la semana impartido en niveles</li>
+                        <li>Certificación Internacional en 3er. grado (KEY, PET, FCE)</li>
+                        <li>Informática 8 horas a la semana</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Regulares</h4>
                     <ul>
-                        <li>Inscripción: $8,535.00 </li>
-                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $7,850.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $8,535.00</li>
+                        <li>Colegiaturas (11 meses, 08:00 a 13:00 hrs): $7,850.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Convenio</h4>
                     <ul>
-                        <li>Inscripción: $4,270.00 </li>
-                        <li>Colegiaturas (11 meses): $5,090.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $4,270.00</li>
+                        <li>Colegiaturas (11 meses): $5,090.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
             </div>
@@ -568,39 +573,39 @@
         <!-- Contenido: Preparatoria -->
         <div id="preparatoria" class="tab-content">
             <h3 style="color: var(--unam-blue); font-size: 1.8rem; margin-bottom: 10px;">Preparatoria Incorporada a la UNAM</h3>
-            <p><strong>Clave de Incorporación 1331 </strong> | Beca del 50% sobre inscripción y colegiatura </p>
+            <p><strong>Clave de Incorporación 1331</strong> | Beca del 50% sobre inscripción y colegiatura</p>
             <div class="info-grid">
                 <div class="info-box">
                     <h4>Beneficios</h4>
                     <ul>
-                        <li>Formación académica de excelencia y preparación universitaria </li>
-                        <li>Certificación de Inglés, Prácticas de campo y Campamento </li>
-                        <li><strong>Promoción antes del 30 de junio 2026:</strong> Inscripción promoción: $3,900.00 </li>
+                        <li>Formación académica de excelencia y preparación universitaria</li>
+                        <li>Certificación de Inglés, Prácticas de campo y Campamento</li>
+                        <li><strong>Promoción antes del 30 de junio 2026:</strong> Inscripción promoción: $3,900.00</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas Regulares (2026-2027)</h4>
                     <ul>
-                        <li>Inscripción: $8,100.00  | Colegiatura (10 meses): $8,000.00 </li>
-                        <li>Incorporación UNAM: $3,300.00 </li>
-                        <li>Credencial UNAM: $600.00 | Laboratorio: $800.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $8,100.00 | Colegiatura (10 meses): $8,000.00</li>
+                        <li>Incorporación UNAM: $3,300.00</li>
+                        <li>Credencial UNAM: $600.00 | Laboratorio: $800.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
                 <div class="info-box">
                     <h4>Cuotas con Beca 50%</h4>
                     <ul>
-                        <li>Inscripción: $4,050.00  | Colegiatura (10 meses): $4,000.00 </li>
-                        <li>Incorporación UNAM: $3,300.00 </li>
-                        <li>Credencial UNAM: $600.00 | Laboratorio: $800.00 </li>
-                        <li>Seguro Escolar: $950.00 </li>
+                        <li>Inscripción: $4,050.00 | Colegiatura (10 meses): $4,000.00</li>
+                        <li>Incorporación UNAM: $3,300.00</li>
+                        <li>Credencial UNAM: $600.00 | Laboratorio: $800.00</li>
+                        <li>Seguro Escolar: $950.00</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Carrusel de Actividades Extraescolares y Eventos con Box para Imagen -->
+    <!-- Carrusel de Actividades Extraescolares y Eventos -->
     <section id="eventos">
         <div style="text-align: center;" data-aos="fade-up">
             <h2 class="section-title">Actividades Extraescolares y Eventos</h2>
@@ -614,7 +619,7 @@
                         <img src="futbol.jpg" alt="Fútbol">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Fútbol </h3>
+                        <h3>Fútbol</h3>
                         <p>Desarrollo físico, trabajo en equipo y disciplina a través de torneos y entrenamientos deportivos especializados.</p>
                     </div>
                 </div>
@@ -624,7 +629,7 @@
                         <img src="basquetbol.jpg" alt="Básquetbol">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Básquetbol </h3>
+                        <h3>Básquetbol</h3>
                         <p>Fomento de la agilidad, coordinación y estrategia en un ambiente competitivo y formativo saludable.</p>
                     </div>
                 </div>
@@ -634,7 +639,7 @@
                         <img src="voleibol.jpg" alt="Voleibol">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Voleibol </h3>
+                        <h3>Voleibol</h3>
                         <p>Estímulo de la comunicación grupal, reflejos y destreza física para alumnos de todas las secciones.</p>
                     </div>
                 </div>
@@ -644,7 +649,7 @@
                         <img src="danza.jpg" alt="Danza">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Danza </h3>
+                        <h3>Danza</h3>
                         <p>Expresión artística, coordinación corporal y confianza escénica mediante diversos géneros de baile.</p>
                     </div>
                 </div>
@@ -654,7 +659,7 @@
                         <img src="taekwondoe.jpg" alt="Tae Kwon Do">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Tae Kwon Do </h3>
+                        <h3>Tae Kwon Do</h3>
                         <p>Arte marcial enfocado en la defensa personal, la concentración mental, el respeto y la autodisciplina.</p>
                     </div>
                 </div>
@@ -664,17 +669,17 @@
                         <img src="bandaguerra.jpg" alt="Banda de Guerra">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Banda de Guerra </h3>
+                        <h3>Banda de Guerra</h3>
                         <p>Fomento del civismo, la sincronía rítmica y el orgullo institucional en ceremonias oficiales.</p>
                     </div>
                 </div>
                 <!-- Actividad 7: Violín -->
                 <div class="carousel-slide">
                     <div class="carousel-img-box">
-                        <img src="violin.jpg" alt="Violín">
+                        <img src="violin2.jfif" alt="Violín">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Violín </h3>
+                        <h3>Violín</h3>
                         <p>Iniciación y perfeccionamiento musical que estimula la sensibilidad artística y la concentración.</p>
                     </div>
                 </div>
@@ -684,7 +689,7 @@
                         <img src="coro.jpg" alt="Coro">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Coro </h3>
+                        <h3>Coro</h3>
                         <p>Desarrollo vocal, afinación y armonía grupal para enriquecer la vida cultural de los estudiantes.</p>
                     </div>
                 </div>
@@ -694,7 +699,7 @@
                         <img src="ingles.jpg" alt="Taller de Inglés">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Taller de Inglés </h3>
+                        <h3>Taller de Inglés</h3>
                         <p>Reforzamiento dinámico de la fluidez y comprensión del idioma extranjero fuera del aula regular.</p>
                     </div>
                 </div>
@@ -704,7 +709,7 @@
                         <img src="tareas.jpg" alt="Club de Tareas">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Club de Tareas </h3>
+                        <h3>Club de Tareas</h3>
                         <p>Acompañamiento académico personalizado para asegurar la correcta comprensión de los temas escolares.</p>
                     </div>
                 </div>
@@ -714,7 +719,7 @@
                         <img src="dibujo.jpg" alt="Dibujo y Artes">
                     </div>
                     <div class="carousel-text-box">
-                        <h3>Dibujo y Artes </h3>
+                        <h3>Dibujo y Artes</h3>
                         <p>Estimulación de la creatividad plástica, técnicas visuales y libre expresión estética.</p>
                     </div>
                 </div>
@@ -727,9 +732,9 @@
     <!-- Footer con Contacto -->
     <footer id="contacto" data-aos="fade-in">
         <p><strong>Colegio Oviedo Schönthal (COS)</strong></p>
-        <p>📍 Calz. de Tlalpan 5090 Col. La Joya, Deleg. Tlalpan, D.F., 14090 </p>
-        <p>📞 55 55 73 27 00 | 📞 55 75 93 67 03 | 📞 55 75 93 67 00 </p>
-        <p style="margin-top: 5px; color: var(--unam-gold);">Instagram: @cos_schonthal  | Derechos reservados © 2026</p>
+        <p>📍 Calz. de Tlalpan 5090 Col. La Joya, Deleg. Tlalpan, D.F., 14090</p>
+        <p>📞 55 55 73 27 00 | 📞 55 75 93 67 03 | 📞 55 75 93 67 00</p>
+        <p style="margin-top: 5px; color: var(--unam-gold);">Instagram: @cos_schonthal | Derechos reservados © 2026</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
