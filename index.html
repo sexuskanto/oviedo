@@ -300,21 +300,22 @@
             align-items: center;
             gap: 30px;
         }
-        .carousel-img-box {
+       .carousel-img-box {
             flex: 0 0 280px;
             height: 180px;
-            background: #ffffff30;
-            border: 2px dashed var(--unam-gold);
+            background: #ffffff; /* Fondo blanco sólido para que resalte la imagen */
+            border: 2px solid var(--unam-gold);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            padding: 5px; /* Margen interno para que la imagen respire */
         }
         .carousel-img-box img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Esto hace que la imagen quepa completa sin recortarse jamás */
             max-width: 100%;
         }
         .carousel-text-box {
