@@ -360,9 +360,18 @@
         }
 
         /* Responsivo móvil */
-        @media (max-width: 900px) {
+       @media (max-width: 900px) {
             .identity-container {
                 flex-direction: column;
+                gap: 20px;
+            }
+            .identity-pair {
+                flex-direction: column; /* Pone la mascota arriba y la tarjeta abajo, o viceversa de forma limpia */
+                width: 100%;
+                max-width: 100%;
+            }
+            .card {
+                width: 100%;
             }
             .carousel-slide {
                 flex-direction: column;
